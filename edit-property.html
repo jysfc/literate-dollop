@@ -1,0 +1,132 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Suite Project</title>
+      <link href="/style/dist.css" rel="stylesheet" />
+   </head>
+   <body>
+      <!-- Background -->
+      <div class="background-image">
+         <div class="container">
+            <div class="row mb-8">
+               <!-- Heading -->
+               <div
+                  class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
+               >
+                  <img
+                     src="/images/hotel-logo-landing.png"
+                     width="116"
+                     height="76"
+                     alt="Hotel Logo"
+                  />
+               </div>
+               <div class="col-7 col-sm-8 col-xl-10 mt-6">
+                  <h1 class="d-inline text-brand text-white">Suite Project</h1>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <!-- Property 1 -->
+               <div class="col-12 col-lg-5">
+                  <div class="card bg-white text-gray">
+                     <img
+                        src="/images/MIR.png"
+                        class="card-img"
+                        width="30"
+                        height="150"
+                        alt="Mirage"
+                     />
+                     <div class="card-img-overlay">
+                        <h5 class="card-title">The Mirage Hotel & Casino</h5>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                     </div>
+                     <!-- edit button -->
+
+                     <button
+                        class="btn btn-grey btn-lg card-text-landing mt-5"
+                        style="width: 100%"
+                        id="edit-button"
+                     >
+                        edit
+                     </button>
+
+                     <!-- Edit -->
+                     <div id="edit-property" class="d-none">
+                        <p class="card-text-landing text-success mt-2 mb-5">
+                           Let's get you signed up.
+                        </p>
+                        <div class="form-group">
+                           <label
+                              for="sign-up-email-input"
+                              class="text-muted lead card-text-landing"
+                              >Email address</label
+                           >
+                           <input
+                              type="email"
+                              class="form-control"
+                              id="sign-up-email-input"
+                           />
+                           <p
+                              class="text-danger d-none"
+                              id="sign-up-email-error"
+                           ></p>
+                        </div>
+                        <div class="form-group">
+                           <label
+                              for="sign-up-password-input"
+                              class="text-muted lead card-text-landing"
+                              >Create a password</label
+                           >
+                           <p class="text-muted card-text-landing mt-n2">
+                              Must be at least 9 characters.
+                           </p>
+                           <input
+                              type="password"
+                              class="form-control"
+                              id="sign-up-password-input"
+                           />
+                           <p
+                              class="text-danger"
+                              id="sign-up-password-error"
+                           ></p>
+                        </div>
+
+                        <a
+                           href="/edit-property.html"
+                           class="float-right btn btn-success btn-lg card-text-landing"
+                           style="width: 100%"
+                           id="save"
+                        >
+                           save
+                        </a>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Property 2 -->
+               <div class="col-12 col-lg-5">
+                  <div class="card bg-dark text-gray">
+                     <img
+                        src="/images/DLV.png"
+                        class="card-img"
+                        width="30"
+                        height="150"
+                        alt="DLV"
+                     />
+                     <div class="card-img-overlay">
+                        <h5 class="card-title">Delano Las Vegas</h5>
+                        <p class="card-text">edit</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+         defer
+      ></script>
+      <script src="/script.js" defer></script>
+   </body>
+</html>
