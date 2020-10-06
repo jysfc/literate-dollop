@@ -1,3 +1,4 @@
+/*
 // overlay
 $("#save-card").click(function () {
    $("#overlay-success").toggleClass("d-flex d-none");
@@ -11,6 +12,7 @@ $("#back-to-answer").click(function () {
 $("#show-delete").click(function () {
    $("#delete-button").removeClass("d-none");
 });
+*/
 
 //sign up button
 $("#sign-up-button").click(function () {
@@ -20,6 +22,6 @@ $("#sign-up-button").click(function () {
 
 //edit button
 $("#edit-button").click(function () {
-   $("#edit-property").toggleClass("d-none");
+   $("#edit-property-card").toggleClass("d-none");
    $("#edit-button").toggleClass("d-none");
 });
