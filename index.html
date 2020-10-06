@@ -12,7 +12,7 @@
             <div class="row mb-8">
                <!-- Heading -->
                <div
-                  class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
+                  class="col-5 col-sm-4 col-xl-3 mt-6 branding-margin float-right"
                >
                   <img
                      src="/images/hotel-logo-landing.png"
@@ -21,126 +21,34 @@
                      alt="Hotel Logo"
                   />
                </div>
-               <div class="col-7 col-sm-8 col-xl-10 mt-6">
+               <div class="col-7 col-sm-8 col-xl-9 mt-6">
                   <h1 class="d-inline text-brand text-white">Suite Project</h1>
+                  <a
+                     href="/login.html"
+                     class="btn btn-link text-white float-right"
+                     >Log in</a
+                  >
+                  <div class="clearfix"></div>
                </div>
             </div>
 
             <div class="row justify-content-center">
-               <!-- new member card -->
-               <div class="col-12 col-lg-5">
-                  <div class="card">
-                     <div class="card-body text-dark">
-                        <h2>Nice to meet you</h2>
-                        <p class="card-text-landing mt-3">
-                           Sign up for Suite Project
-                        </p>
-
-                        <!-- new member card button -->
-
-                        <button
-                           class="btn btn-success btn-lg card-text-landing mt-5"
-                           style="width: 100%"
-                           id="sign-up-button"
-                        >
-                           Sign up
-                        </button>
-
-                        <!-- create account card -->
-                        <div id="create-account-card" class="d-none">
-                           <p class="card-text-landing text-success mt-2 mb-5">
-                              Let's get you signed up.
-                           </p>
-                           <div class="form-group">
-                              <label
-                                 for="sign-up-email-input"
-                                 class="text-muted lead card-text-landing"
-                                 >Email address</label
-                              >
-                              <input
-                                 type="email"
-                                 class="form-control"
-                                 id="sign-up-email-input"
-                              />
-                              <p
-                                 class="text-danger d-none"
-                                 id="sign-up-email-error"
-                              ></p>
-                           </div>
-                           <div class="form-group">
-                              <label
-                                 for="sign-up-password-input"
-                                 class="text-muted lead card-text-landing"
-                                 >Create a password</label
-                              >
-                              <p class="text-muted card-text-landing mt-n2">
-                                 Must be at least 9 characters.
-                              </p>
-                              <input
-                                 type="password"
-                                 class="form-control"
-                                 id="sign-up-password-input"
-                              />
-                              <p
-                                 class="text-danger"
-                                 id="sign-up-password-error"
-                              ></p>
-                           </div>
-
-                           <a
-                              href="/edit-property.html"
-                              class="float-right btn btn-success btn-lg card-text-landing"
-                              style="width: 100%"
-                              id="lets-go"
-                           >
-                              Let's go!
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- return card -->
-               <div class="col-12 col-lg-5 ml-lg-8">
-                  <div class="card mt-8 mt-lg-0">
-                     <div class="card-body text-dark">
-                        <h2>Welcome back</h2>
-                        <p class="card-text-landing mt-3 mb-5">
-                           Log in with your email address and password.
-                        </p>
-
-                        <div class="form-group">
-                           <label
-                              for="email-input"
-                              class="text-muted lead card-text-landing"
-                              >Email address</label
-                           >
-                           <input
-                              type="email"
-                              class="form-control"
-                              id="email-input"
-                           />
-                        </div>
-                        <div class="form-group">
-                           <label
-                              for="password-input"
-                              class="text-muted lead card-text-landing"
-                              >Password</label
-                           >
-                           <input
-                              type="email"
-                              class="form-control"
-                              id="password-input"
-                           />
-                        </div>
-                        <a
-                           href="/edit property.html"
-                           id="login-button"
-                           class="float-right btn btn-success btn-lg card-text-landing"
-                        >
-                           Log in
-                        </a>
-                     </div>
+               <!-- search bar-->
+               <div class="input-group">
+                  <input
+                     type="text"
+                     aria-label="City"
+                     class="form-control"
+                     placeholder="City or Zipcode"
+                  />
+                  <input
+                     type="text"
+                     aria-label="Number-of-beds"
+                     class="form-control"
+                     placeholder="Number of beds"
+                  />
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">search</span>
                   </div>
                </div>
             </div>
