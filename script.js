@@ -25,5 +25,3 @@ $("#edit-button").click(function () {
    $("#edit-property-card").toggleClass("d-none");
    $("#edit-button").toggleClass("d-none");
 });
-
-//test
