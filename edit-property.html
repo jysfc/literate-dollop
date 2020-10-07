@@ -9,8 +9,8 @@
       <!-- Background -->
       <!-- <div class="background-image">-->
       <div class="container text-muted">
-         <div class="row mb-8">
-            <!-- Heading -->
+          <div class="row mb-8">
+             <!--Heading-->
             <div
                class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
             >
@@ -30,8 +30,9 @@
          </div>
          <div class="row row-cols-1 row-cols-md-2">
             <!-- edit property card -->
+            
             <div id="edit-property-card">
-               <p class="card-text-landing">Mirage Hotel & Casino</p>
+               <h3 class="card-text-landing text-white">Mirage Hotel & Casino</h3>
                <form>
                   <div class="form-row">
                      <div class="form-group col-lg-6">
@@ -43,8 +44,8 @@
                         />
                      </div>
                      <div class="form-group col-lg-6">
-                        <label for="inputurl">Website URL</label>
-                        <input type="url" class="form-control" id="inputurl" />
+                        <label for="inputUrl">Website URL</label>
+                        <input type="url" class="form-control" id="inputUrl" />
                      </div>
                   </div>
                   <div class="form-group">
@@ -135,7 +136,7 @@
                         <label for="inputZip">Zip</label>
                         <input type="text" class="form-control" id="inputZip" />
                      </div>
-                     <!-- Country -->
+                     <!-- Country Abbreviation -->
                      <div class="form-group col-md-3">
                         <label for="inputState">Country</label>
                         <select id="inputState" class="form-control">
@@ -392,7 +393,7 @@
                      </div>
                   </div>
                   <!-- country code & phone number-->
-                  <div class="form-row">
+            <div class="form-row">
                   <div class="form-group col-md-4">
                      <label for="inputCountryCode">Country Code</label>
                      <select id="countryCode" class="form-control">
@@ -638,7 +639,8 @@
                         id="inputPhone"
                         placeholder="123-456-7890"
                      />
-               </div>
+                     </div>
+               
                   <div class="form-row">
                      <div class="form-group col-md-4">
                         <label for="inputResortFee">Resort Fee</label>
@@ -665,11 +667,10 @@
                         />
                      </div>
                   </div>
-
-                  <div class="form-group">
+                        <!--hotel amenities checkbox-->
+                  <div class="form-group col-md-12">
                      <label for="inputHotelAmenities"
-                        >Hotel Amenities: Select None or Many</label
-                     >
+                        >Hotel Amenities: Select None or Many</label>
                   </div>
 
                   <div class="form-group form-check-inline">
@@ -769,7 +770,14 @@
                </a>
             </div>
          </div>
-      </div>
+      
+               <div class="col mb-4">
+                     <a href="/edit-suite.html" type="button" class="btn btn-primary btn-lg btn-block">One Bedroom Penthouse</a>
+                     <a href="/edit-suite.html" type="button" class="btn btn-primary btn-lg btn-block">Two Bedroom Tower Suite</a>
+                     <a href="/edit-suite.html" type="button" class="btn btn-primary btn-lg btn-block">Add Suite</a>
+               </div>
+         </div>
+      
       <script
          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
          defer
