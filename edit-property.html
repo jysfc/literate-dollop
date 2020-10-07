@@ -5,41 +5,36 @@
       <title>Suite Project</title>
       <link href="/style/dist.css" rel="stylesheet" />
    </head>
-   <body>
-      <body style="background-color: rgb(19, 45, 45)">
-         <!-- Background -->
-         <!-- <div class="background-image">-->
-         <div class="container">
-            <div class="row mb-8">
-               <!-- Heading -->
-               <div
-                  class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
-               >
-                  <img
-                     src="/images/hotel-logo-landing.png"
-                     width="110"
-                     height="100"
-                     alt="Hotel Logo"
-                  />
-               </div>
-               <div class="col-7 col-sm-8 col-xl-10 mt-6">
-                  <h1 class="d-inline text-white">Suite Project</h1>
-                  <a
-                     href="/index.html"
-                     class="btn btn-link text-white float-right"
-                     >Log out</a
-                  >
-               </div>
+   <body style="background-color: rgb(19, 45, 45)">
+      <!-- Background -->
+      <!-- <div class="background-image">-->
+      <div class="container text-muted">
+         <div class="row mb-8">
+            <!-- Heading -->
+            <div
+               class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
+            >
+               <img
+                  src="/images/hotel-logo-landing.png"
+                  width="110"
+                  height="100"
+                  alt="Hotel Logo"
+               />
             </div>
-
+            <div class="col-7 col-sm-8 col-xl-10 mt-6">
+               <h1 class="d-inline text-white">Suite Project</h1>
+               <a href="/index.html" class="btn btn-link text-white float-right"
+                  >Log out</a
+               >
+            </div>
+         </div>
+         <div class="row row-cols-1 row-cols-md-2">
             <!-- edit property card -->
             <div id="edit-property-card">
-               <p class="card-text-landing text-muted col-lg-12">
-                  Mirage Hotel & Casino
-               </p>
+               <p class="card-text-landing">Mirage Hotel & Casino</p>
                <form>
                   <div class="form-row">
-                     <div class="form-group text-muted col-lg-6">
+                     <div class="form-group col-lg-6">
                         <label for="inputHotel">Hotel</label>
                         <input
                            type="text"
@@ -47,12 +42,12 @@
                            id="inputHotel"
                         />
                      </div>
-                     <div class="form-group text-muted col-lg-6">
+                     <div class="form-group col-lg-6">
                         <label for="inputurl">Website URL</label>
                         <input type="url" class="form-control" id="inputurl" />
                      </div>
                   </div>
-                  <div class="form-group text-muted col-lg-12">
+                  <div class="form-group">
                      <label for="inputAddress">Address</label>
                      <input
                         type="text"
@@ -61,7 +56,7 @@
                         placeholder="1234 Main St"
                      />
                   </div>
-                  <div class="form-group text-muted col-lg-12">
+                  <div class="form-group">
                      <label for="inputAddress2">Address 2</label>
                      <input
                         type="text"
@@ -71,7 +66,7 @@
                      />
                   </div>
                   <div class="form-row">
-                     <div class="form-group text-muted col-md-6">
+                     <div class="form-group col-md-4">
                         <label for="inputCity">City</label>
                         <input
                            type="text"
@@ -79,7 +74,7 @@
                            id="inputCity"
                         />
                      </div>
-                     <div class="form-group text-muted col-md-3">
+                     <div class="form-group col-md-3">
                         <label for="inputState">State</label>
                         <select id="inputState" class="form-control">
                            <option selected>AL</option>
@@ -89,16 +84,102 @@
                            <option>CA</option>
                         </select>
                      </div>
-                     <div class="form-group text-muted col-md-3">
+                     <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
                         <input type="text" class="form-control" id="inputZip" />
                      </div>
+                     <div class="form-group col-md-3">
+                        <label for="inputState">Country</label>
+                        <select id="inputState" class="form-control">
+                           <option selected>USA</option>
+                           <option>AF</option>
+                           <option>AL</option>
+                           <option>DZ</option>
+                           <option>AX</option>
+                        </select>
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="inputPhone">Phone Number</label>
+                     <input
+                        type="phone"
+                        class="form-control"
+                        id="inputPhone"
+                        placeholder="123-456-7890"
+                     />
+                  </div>
+                  <div class="form-row">
+                     <div class="form-group col-md-4">
+                        <label for="inputResortFee">Resort Fee</label>
+                        <input
+                           type="number"
+                           class="form-control"
+                           id="inputResortFee"
+                        />
+                     </div>
+                     <div class="form-group col-md-4">
+                        <label for="inputSelfParking">Self Parking</label>
+                        <input
+                           type="number"
+                           class="form-control"
+                           id="inputSelfParking"
+                        />
+                     </div>
+                     <div class="form-group col-md-4">
+                        <label for="inputValetParking">Valet Parking</label>
+                        <input
+                           type="number"
+                           class="form-control"
+                           id="inputValetParking"
+                        />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="inputHotelAmenities"
+                        >Hotel Amenities: Select None or Many</label
+                     >
+                  </div>
+
+                  <div class="form-group form-check-inline">
+                     <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                     />
+                     <label class="form-check-label" for="inlineCheckbox1"
+                        >1</label
+                     >
+                  </div>
+                  <div class="form-group form-check-inline">
+                     <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox2"
+                        value="option2"
+                     />
+                     <label class="form-check-label" for="inlineCheckbox2"
+                        >2</label
+                     >
+                  </div>
+                  <div class="form-group form-check-inline">
+                     <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox3"
+                        value="option3"
+                        disabled
+                     />
+                     <label class="form-check-label" for="inlineCheckbox3"
+                        >3 (disabled)</label
+                     >
                   </div>
                </form>
-
                <a
                   href="/edit-property.html"
-                  class="float-right btn btn-success btn-lg card-text-landing"
+                  class="float-right btn btn-success btn-lg card-text-landing mb-6"
                   style="width: 100%"
                   id="save"
                >
