@@ -33,7 +33,7 @@
             <!-- edit property card -->
             
             <div id="edit-property-card">
-               <h3 class="card-text-landing text-white">Mirage Hotel & Casino</h3>
+               
                <form>
                   <div class="form-row">
                      <div class="form-group col-lg-6">
@@ -42,11 +42,12 @@
                            type="text"
                            class="form-control"
                            id="inputHotel"
+                           placeholder="The Mirage Hotel & Casino"
                         />
                      </div>
                      <div class="form-group col-lg-6">
                         <label for="inputUrl">Website URL</label>
-                        <input type="url" class="form-control" id="inputUrl" />
+                        <input type="url" class="form-control" id="inputUrl" placeholder="www.mirage.com" />
                      </div>
                   </div>
                   <div class="form-group">
@@ -55,7 +56,7 @@
                         type="text"
                         class="form-control"
                         id="inputAddress"
-                        placeholder="1234 Main St"
+                        placeholder="3400 S Las Vegas Blvd"
                      />
                   </div>
                   <div class="form-group">
@@ -64,7 +65,7 @@
                         type="text"
                         class="form-control"
                         id="inputAddress2"
-                        placeholder="Apartment, studio, or floor"
+                        placeholder=""
                      />
                   </div>
                   <div class="form-row">
@@ -74,12 +75,14 @@
                            type="text"
                            class="form-control"
                            id="inputCity"
+                           placeholder="Las Vegas"
                         />
                      </div>
                      <!--State Abbreviation-->
                      <div class="form-group col-md-3">
                         <label for="inputState">State</label>
                         <select id="inputState" class="form-control">
+                           <option value="NV">Nevada</option>
                            <option value="AL">Alabama</option>
                            <option value="AK">Alaska</option>
                            <option value="AZ">Arizona</option>
@@ -135,12 +138,14 @@
                      </div>
                      <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" />
+                        <input type="text" class="form-control" id="inputZip"
+                        placeholder="89109" />
                      </div>
                      <!-- Country Abbreviation -->
                      <div class="form-group col-md-3">
                         <label for="inputState">Country</label>
                         <select id="inputState" class="form-control">
+                           <option value="US">United States</option>
                               <option value="AF">Afghanistan</option>
                               <option value="AX">Åland Islands</option>
                               <option value="AL">Albania</option>
@@ -398,6 +403,7 @@
                   <div class="form-group col-md-4">
                      <label for="inputCountryCode">Country Code</label>
                      <select id="countryCode" class="form-control">
+                        <option data-countryCode="US" value="1">&#x1F1FA&#x1F1F8 United States of America (+1)</option>
                         <option data-countryCode="AF" value="93">&#x1F1E6&#x1F1EB Afghanistan (+93)</option>
                         <option data-countryCode="AL" value="355">&#x1F1E6&#x1F1FD Albania (+355)</option>
                         <option data-countryCode="DZ" value="213">&#x1F1E9&#x1F1FF Algeria (+213)</option>
@@ -638,7 +644,7 @@
                         type="phone"
                         class="form-control"
                         id="inputPhone"
-                        placeholder="123-456-7890"
+                        placeholder="702-791-7111"
                      />
                      </div>
                
@@ -649,6 +655,7 @@
                            type="number"
                            class="form-control"
                            id="inputResortFee"
+                           placeholder="$39"
                         />
                      </div>
                      <div class="form-group col-md-4">
@@ -657,6 +664,7 @@
                            type="number"
                            class="form-control"
                            id="inputSelfParking"
+                           placeholder="$0"
                         />
                      </div>
                      <div class="form-group col-md-4">
@@ -665,6 +673,7 @@
                            type="number"
                            class="form-control"
                            id="inputValetParking"
+                           placeholder="N/A"
                         />
                      </div>
                   </div>
