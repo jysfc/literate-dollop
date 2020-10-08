@@ -5,159 +5,125 @@
       <title>Suite Project</title>
       <link href="/style/dist.css" rel="stylesheet" />
    </head>
-   <body>
-      <body style="background-color: white">
-         <!-- Background -->
-         <!-- <div class="background-image">-->
-         <div class="container">
-            <div class="row mb-8">
-               <!-- Heading -->
-               <div
-                  class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
-               >
-                  <img
-                     src="/images/bed-logo.png"
-                     width="110"
-                     height="100"
-                     alt="Hotel Logo"
-                  />
-               </div>
-               <div class="col-7 col-sm-8 col-xl-10 mt-6">
-                  <h1 class="d-inline ">Suite Project</h1>
-                  <a
-                     href="/index.html"
-                     class="btn btn-link float-right"
-                     >Log out</a
-                  >
-               </div>
+   <body style="background-color: white">
+      <div class="container">
+         <div class="row">
+            <!--HEADING-->
+            <div
+               class="col-5 col-sm-4 col-xl-2 mt-6 branding-margin float-right"
+            >
+               <img
+                  src="/images/bed-logo.png"
+                  width="110"
+                  height="100"
+                  alt="Hotel Logo"
+               />
             </div>
-            <div class="row row-cols-1 row-cols-md-2">
-            <!-- edit property card -->
-            <div id="edit-property-card">
-               <p class="card-text-landing text-muted">
-                  The Mirage Hotel & Casino
-               </p>
-               <form>
-                  <div class="form-row">
-                     <div class="form-group text-muted col-lg-6">
-                        <label for="inputHotel">Hotel</label>
-                        <input
-                           type="text"
-                           class="form-control"
-                           id="inputHotel"
-                        />
-                     </div>
-                     <div class="form-group text-muted col-lg-6">
-                        <label for="inputurl">Website URL</label>
-                        <input type="url" class="form-control" id="inputurl" />
-                     </div>
-                  </div>
-                  <div class="form-group text-muted">
-                     <label for="inputAddress">Address</label>
-                     <input
-                        type="text"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="1234 Main St"
-                     />
-                  </div>
-                  <div class="form-group text-muted">
-                     <label for="inputAddress2">Address 2</label>
-                     <input
-                        type="text"
-                        class="form-control"
-                        id="inputAddress2"
-                        placeholder="Apartment, studio, or floor"
-                     />
-                  </div>
-                  <div class="form-row">
-                     <div class="form-group text-muted col-md-4">
-                        <label for="inputCity">City</label>
-                        <input
-                           type="text"
-                           class="form-control"
-                           id="inputCity"
-                        />
-                     </div>
-                     <div class="form-group text-muted col-md-3">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                           <option selected>AL</option>
-                           <option>AK</option>
-                           <option>AZ</option>
-                           <option>AR</option>
-                           <option>CA</option>
-                        </select>
-                     </div>
-                     <div class="form-group text-muted col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" />
-                     </div>
-                     <div class="form-group text-muted col-md-3">
-                        <label for="inputState">Country</label>
-                        <select id="inputState" class="form-control">
-                           <option selected>USA</option>
-                           <option>AF</option>
-                           <option>AL</option>
-                           <option>DZ</option>
-                           <option>AX</option>
-                        </select>
-                     </div>
-                  </div>
-               
-                  <div class="form-group text-muted">
-                    <label for="inputPhone">Phone Number</label>
-                    <input type="phone" class="form-control" id="inputPhone" placeholder="123-456-7890">
-                  </div>
-                  <div class="form-row">
-                  <div class="form-group text-muted col-md-4">
-                     <label for="inputResortFee">Resort Fee</label>
-                     <input type="number" class="form-control" id="inputResortFee" />
-                  </div>
-                  <div class="form-group text-muted col-md-4">
-                     <label for="inputSelfParking">Self Parking</label>
-                     <input type="number" class="form-control" id="inputSelfParking" />
-                  </div>
-                  <div class="form-group text-muted col-md-4">
-                     <label for="inputValetParking">Valet Parking</label>
-                     <input type="number" class="form-control" id="inputValetParking" />
+            <div class="col-7 col-sm-8 col-xl-10 mt-6">
+               <h1 class="d-inline">Suite Project</h1>
+               <a href="/index.html" class="btn btn-link float-right"
+                  >Log out</a
+               >
+            </div>
+            <!--COLUMN LEFT PROP INFO-->
+            <div class="container mt-6">
+               <div class="row">
+                  <div class="col">1 of 2</div>
+
+                  <!--COLUMN RIGHT EDIT SUITE-->
+                  <!--ask mike about cursor over add image-->
+                  <div class="col">
+                     <form class="md-form">
+                        <div class="file-field">
+                           <div class="mb-4">
+                              <label for="file">
+                                 <img
+                                    src="images/image-add.png"
+                                    alt="add suite photo"
+                                 />
+                                 <input
+                                    type="file"
+                                    id="file"
+                                    style="display: none"
+                                    name="image"
+                                    accept="image/gif,image/jpeg,image/jpg,image/png"
+                                    multiple=""
+                                    data-original-title="upload photos"
+                                 />
+                              </label>
+                              <!--BEDROOMS-->
+                              <div class="form-group">
+                                 <label for="inputBedrooms"
+                                    >Number of bedrooms</label
+                                 >
+                                 <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputBedrooms"
+                                    placeholder="2"
+                                 />
+                              </div>
+                              <!--ROW OF BEDS-->
+                              <div class="form-row">
+                                 <div class="form-group col-4">
+                                    <label for="inputKingBed">King beds</label>
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       id="inputKingBed"
+                                       placeholder="1"
+                                    />
+                                 </div>
+                                 <div class="form-group col-4">
+                                    <label for="inputQueenBed"
+                                       >Queen beds</label
+                                    >
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       id="inputQueenBed"
+                                       placeholder="2"
+                                    />
+                                 </div>
+                                 <div class="form-group col-4">
+                                    <label for="inputFullBed">Full beds</label>
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       id="inputFullBed"
+                                       placeholder="0"
+                                    />
+                                 </div>
+                              </div>
+                              <!--SQFT and MAX GST-->
+                              <div class="form-row">
+                                 <div class="form-group col-6">
+                                    <label for="inputSqft">Square ft.</label>
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       id="inputSqft"
+                                       placeholder="1714"
+                                    />
+                                 </div>
+                                 <div class="form-group col-6">
+                                    <label for="inputMaxGuest"
+                                       >Max Guests</label
+                                    >
+                                    <input
+                                       type="text"
+                                       class="form-control"
+                                       id="inputMaxGuest"
+                                       placeholder="6"
+                                    />
+                                 </div>
+                              </div>
+                              <!--SUITE AMENITIES-->
+                           </div>
+                        </div>
+                     </form>
                   </div>
                </div>
-                  <div class="form-group text-muted">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group text-muted">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group text-muted">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                </form>
-                <a
-                href="/edit-property.html"
-                class="float-right btn btn-success btn-lg card-text-landing"
-                style="width: 100%"
-                id="save"
-             >
-                save
-             </a>
-
-</div>
             </div>
          </div>
       </div>
