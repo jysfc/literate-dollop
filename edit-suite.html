@@ -28,97 +28,352 @@
             <!--COLUMN LEFT PROP INFO-->
             <div class="container mt-6">
                <div class="row">
-                  <div class="col">1 of 2</div>
+                  <div class="col">
+                     <h2>Two Bedroom Hospitality Suite</h2>
+                     <h4>The Mirage Hotel & Casino</h4>
+
+                     <ul class="list-unstyled">
+                        <li class="mt-4">3400 S Las Vegas Blvd</li>
+                        <li>Las Vegas, NV 89109 US</li>
+                        <li>+1(702) 791-7111</li>
+                        <li>mirage.com</li>
+
+                        <li class="mt-4"><strong>Resort fee:</strong> $39</li>
+                        <li><strong>Self parking:</strong> Free</li>
+                        <li><strong>Valet parking:</strong> N/A</li>
+                        <li class="lead mt-4">Hotel Amenities:</li>
+                        <li>
+                           <ul>
+                              <li>Outdoor Pool</li>
+                              <li>Health/Fitness Center</li>
+                              <li>Spa</li>
+                              <li>Business Center</li>
+                              <li>Dog Friendly</li>
+                              <li>Smoke-free</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
 
                   <!--COLUMN RIGHT EDIT SUITE-->
                   <!--ask mike about cursor over add image-->
                   <div class="col">
                      <form class="md-form">
                         <div class="file-field">
-                           <div class="mb-4">
-                              <label for="file">
-                                 <img
-                                    src="images/image-add.png"
-                                    alt="add suite photo"
-                                 />
-                                 <input
-                                    type="file"
-                                    id="file"
-                                    style="display: none"
-                                    name="image"
-                                    accept="image/gif,image/jpeg,image/jpg,image/png"
-                                    multiple=""
-                                    data-original-title="upload photos"
-                                 />
-                              </label>
-                              <!--BEDROOMS-->
-                              <div class="form-group">
-                                 <label for="inputBedrooms"
-                                    >Number of bedrooms</label
-                                 >
-                                 <input
-                                    type="text"
-                                    class="form-control"
-                                    id="inputBedrooms"
-                                    placeholder="2"
-                                 />
-                              </div>
-                              <!--ROW OF BEDS-->
-                              <div class="form-row">
-                                 <div class="form-group col-4">
-                                    <label for="inputKingBed">King beds</label>
-                                    <input
-                                       type="text"
-                                       class="form-control"
-                                       id="inputKingBed"
-                                       placeholder="1"
-                                    />
-                                 </div>
-                                 <div class="form-group col-4">
-                                    <label for="inputQueenBed"
-                                       >Queen beds</label
-                                    >
-                                    <input
-                                       type="text"
-                                       class="form-control"
-                                       id="inputQueenBed"
-                                       placeholder="2"
-                                    />
-                                 </div>
-                                 <div class="form-group col-4">
-                                    <label for="inputFullBed">Full beds</label>
-                                    <input
-                                       type="text"
-                                       class="form-control"
-                                       id="inputFullBed"
-                                       placeholder="0"
-                                    />
-                                 </div>
-                              </div>
-                              <!--SQFT and MAX GST-->
-                              <div class="form-row">
-                                 <div class="form-group col-6">
-                                    <label for="inputSqft">Square ft.</label>
-                                    <input
-                                       type="text"
-                                       class="form-control"
-                                       id="inputSqft"
-                                       placeholder="1714"
-                                    />
-                                 </div>
-                                 <div class="form-group col-6">
-                                    <label for="inputMaxGuest"
-                                       >Max Guests</label
-                                    >
-                                    <input
-                                       type="text"
-                                       class="form-control"
-                                       id="inputMaxGuest"
-                                       placeholder="6"
-                                    />
-                                 </div>
-                              </div>
-                              <!--SUITE AMENITIES-->
+                           <label for="file">
+                              <img
+                                 src="images/image-add.png"
+                                 alt="add suite photo"
+                              />
+                              <input
+                                 type="file"
+                                 id="file"
+                                 style="display: none"
+                                 name="image"
+                                 accept="image/gif,image/jpeg,image/jpg,image/png"
+                                 multiple=""
+                                 data-original-title="upload photos"
+                              />
+                           </label>
+                        </div>
+                        <!--BEDROOMS-->
+                        <div class="form-group">
+                           <label for="inputBedrooms">Number of bedrooms</label>
+                           <input
+                              type="text"
+                              class="form-control"
+                              id="inputBedrooms"
+                              placeholder="2"
+                           />
+                        </div>
+                        <!--ROW OF BEDS-->
+                        <div class="form-row">
+                           <div class="form-group col-4">
+                              <label for="inputKingBed">King beds</label>
+                              <input
+                                 type="text"
+                                 class="form-control"
+                                 id="inputKingBed"
+                                 placeholder="1"
+                              />
+                           </div>
+                           <div class="form-group col-4">
+                              <label for="inputQueenBed">Queen beds</label>
+                              <input
+                                 type="text"
+                                 class="form-control"
+                                 id="inputQueenBed"
+                                 placeholder="2"
+                              />
+                           </div>
+                           <div class="form-group col-4">
+                              <label for="inputFullBed">Full beds</label>
+                              <input
+                                 type="text"
+                                 class="form-control"
+                                 id="inputFullBed"
+                                 placeholder="0"
+                              />
+                           </div>
+                        </div>
+                        <!--SQFT and MAX GST-->
+                        <div class="form-row">
+                           <div class="form-group col-6">
+                              <label for="inputSqft">Square ft.</label>
+                              <input
+                                 type="text"
+                                 class="form-control"
+                                 id="inputSqft"
+                                 placeholder="1714"
+                              />
+                           </div>
+                           <div class="form-group col-6">
+                              <label for="inputMaxGuest">Max Guests</label>
+                              <input
+                                 type="text"
+                                 class="form-control"
+                                 id="inputMaxGuest"
+                                 placeholder="6"
+                              />
+                           </div>
+                        </div>
+                        <!--SUITE AMENITIES-->
+                        <div class="form-row">
+                           <div class="form-group col-md-12">
+                              <label for="inputHotelAmenities"
+                                 >Suite Amenities: Select None or Many</label
+                              >
+                           </div>
+
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="wifi"
+                                 value="option1"
+                              />
+                              <label class="form-check-label" for="wifi"
+                                 >WiFi</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="tv"
+                                 value="option2"
+                              />
+                              <label class="form-check-label" for="tv"
+                                 >TV</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="personalFridge"
+                                 value="option3"
+                              />
+                              <label
+                                 class="form-check-label"
+                                 for="personalFridge"
+                                 >Personal Fridge</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="miniBar"
+                                 value="option4"
+                              />
+                              <label class="form-check-label" for="miniBar"
+                                 >Mini Bar</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="inRoomSafe"
+                                 value="option5"
+                              />
+                              <label class="form-check-label" for="inRoomSafe"
+                                 >In-Room Safe</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="IronBoard"
+                                 value="option6"
+                              />
+                              <label class="form-check-label" for="IronBoard"
+                                 >Iron & Ironing Board</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="hairDryer"
+                                 value="option7"
+                              />
+                              <label class="form-check-label" for="hairDryer"
+                                 >Hair Dryer</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="toiletries"
+                                 value="option8"
+                              />
+                              <label class="form-check-label" for="toiletries"
+                                 >Toiletries</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="vanityMirror"
+                                 value="option9"
+                              />
+                              <label class="form-check-label" for="vanityMirror"
+                                 >Vanity Mirror</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="dualSink"
+                                 value="option10"
+                              />
+                              <label class="form-check-label" for="dualSink"
+                                 >Dual Sink</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="tubSeparateShower"
+                                 value="option11"
+                              />
+                              <label
+                                 class="form-check-label"
+                                 for="tubSeparateShower"
+                                 >Soaking Tub and Separate Walk-in Shower</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="robesSlippers"
+                                 value="option12"
+                              />
+                              <label
+                                 class="form-check-label"
+                                 for="robesSlippers"
+                                 >Robes & Slippers</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="walkCloset"
+                                 value="option13"
+                              />
+                              <label class="form-check-label" for="walkCloset"
+                                 >Illuminated Walk-in Closet</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="rollaway"
+                                 value="option14"
+                              />
+                              <label class="form-check-label" for="rollaway"
+                                 >Rollaway upon Request</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="crib"
+                                 value="option15"
+                              />
+                              <label class="form-check-label" for="crib"
+                                 >Crib upon Request</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="climateControl"
+                                 value="option16"
+                              />
+                              <label
+                                 class="form-check-label"
+                                 for="climateControl"
+                                 >Climate Control</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="workstation"
+                                 value="option17"
+                              />
+                              <label class="form-check-label" for="workstation"
+                                 >Workstation</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="blackoutShades"
+                                 value="option18"
+                              />
+                              <label
+                                 class="form-check-label"
+                                 for="blackoutShades"
+                                 >Blackout Shades</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="diningArea"
+                                 value="option19"
+                              />
+                              <label class="form-check-label" for="diningArea"
+                                 >Dining Area</label
+                              >
+                           </div>
+                           <div class="form-group form-check-inline">
+                              <input
+                                 class="form-check-input"
+                                 type="checkbox"
+                                 id="accessible"
+                                 value="option20"
+                              />
+                              <label class="form-check-label" for="accessible"
+                                 >Accessible</label
+                              >
                            </div>
                         </div>
                      </form>
@@ -127,6 +382,7 @@
             </div>
          </div>
       </div>
+
       <script
          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
          defer
