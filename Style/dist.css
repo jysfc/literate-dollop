@@ -11432,4 +11432,9 @@ textarea {
   color: #fff;
 }
 
+a,
+u {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=dist.css.map */
