@@ -33,63 +33,49 @@
                <div class="clearfix"></div>
             </div>
          </div>
-         <div class="row row-cols-1 row-cols-md-2">
+         <div class="row">
             <!-- Property 1 -->
-            <div class="col mb-4 shadow p-3 mb-5 bg-white rounded">
-               <div class="card text-gray">
-                  <img
-                     src="/images/MIR.png"
-                     class="card-img"
-                     style="opacity: 0.6; filter: alpha(opacity=60)"
-                     width="38px"
-                     id="Mirage"
-                  />
-                  <div class="card-img-overlay">
-                     <h5 class="card-title">The Mirage Hotel & Casino</h5>
-                     <a
-                        href="/edit-property.html"
-                        class="card-text text-primary text-decoration-none"
-                        ><img
-                           src="/icons/edit.svg"
-                           width="20px"
-                           id="hotel-add"
-                        />Edit</a
-                     >
-                     <p class="card-text text-muted">Last updated 3 mins ago</p>
-                  </div>
-               </div>
+            <div class="col mb-4 mr-2 shadow p-3 mb-5 bg-white rounded">
+               <h5>The Mirage Hotel & Casino</h5>
+               <p class="text-muted">Last updated 3 mins ago</p>
+
+               <a
+                  href="/edit-property.html"
+                  class="text-danger text-decoration-none float-right"
+                  ><img
+                     src="/icons/remove.svg"
+                     width="20px"
+                     id="hotel-add"
+                  />Remove</a
+               >
             </div>
 
             <!-- Property 2 -->
-            <div class="col mb-4">
+            <div class="col mb-4 mr-2 shadow p-3 mb-5 bg-white rounded">
+               <h5>Mandalay Bay Hotel & Casino</h5>
+               <p class="text-muted">Last updated 3 mins ago</p>
+
                <a
                   href="/edit-property.html"
-                  class="text-decoration-none btn btn-outline-primary"
-               >
-                  <h2 class="text-primary">Mandalay Bay Hotel & Casino</h2>
-                  <img src="/icons/edit.svg" width="20px" id="hotel-add" />Edit
-                  <img
-                     src="/icons/delete.svg"
+                  class="text-danger text-decoration-none float-right"
+                  ><img
+                     src="/icons/remove.svg"
                      width="20px"
-                     id="hotel-remove"
-                     class="text-danger"
-                  />Remove
-
-                  <p class="card-text text-muted mt-4">
-                     Last updated 3 mins ago
-                  </p>
-               </a>
+                     id="hotel-add"
+                  />Remove</a
+               >
             </div>
-
-            <!-- Property new -->
+         </div>
+         <!-- Property new -->
+         <div class="row">
             <div class="col mb-4">
                <a
                   href="/edit-property.html"
-                  class="text-decoration-none btn btn-outline-primary"
+                  class="text-decoration-none"
                   type="add-property"
                >
                   <img src="/icons/add.svg" width="24px" id="hotel-add" />
-                  <p class="d-inline">Add Property</p>
+                  <p class="d-inline ml-4">Add Property</p>
                </a>
             </div>
          </div>
