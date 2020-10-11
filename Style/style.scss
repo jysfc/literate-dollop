@@ -24,6 +24,7 @@ Example:
 
 .text-brand {
    font-family: $font-family-brand;
+   font-weight: lighter;
 }
 
 .btn-link {
@@ -76,8 +77,4 @@ textarea {
 .bg-success,
 .bg-danger {
    color: $white;
-}
-.crop img {
-   width: 300px;
-   height: 100px;
 }
