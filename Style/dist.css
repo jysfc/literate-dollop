@@ -359,19 +359,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 3.75rem;
+  font-size: 3rem;
 }
 
 h2, .h2 {
-  font-size: 1.6875rem;
+  font-size: 1.25rem;
 }
 
 h3, .h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h4, .h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h5, .h5 {
@@ -383,7 +383,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -2378,7 +2378,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 350;
   color: #212529;
   text-align: center;
   vertical-align: middle;
@@ -11120,7 +11120,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-light {
-  font-weight: 300 !important;
+  font-weight: 200 !important;
 }
 
 .font-weight-lighter {
@@ -11132,7 +11132,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 350 !important;
 }
 
 .font-weight-bolder {
@@ -11377,7 +11377,7 @@ Example:
 }
 
 .btn-link {
-  font-weight: 700;
+  font-weight: 350;
   padding-left: 0;
   padding-right: 0;
   border: none;
