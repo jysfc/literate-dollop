@@ -78,3 +78,14 @@ textarea {
 .bg-danger {
    color: $white;
 }
+
+.crop {
+   width: 300px;
+   height: 100px;
+   overflow: hidden;
+}
+
+.crop img {
+   width: 300px;
+   height: 100px;
+}
