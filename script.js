@@ -10,97 +10,135 @@ $("#edit-button").click(function () {
    $("#edit-button").toggleClass("d-none");
 });
 
-// lets go button
+//lets go button
 $("#lets-go").click(function () {
-   //email input
-   const emailInput = $("#sign-up-email-input").val();
-   let lowerCaseEmail = emailInput.trim().toLowerCase();
-   const passwordInput = $("#sign-up-password-input").val();
-   const lowerCasePassword = passwordInput.trim().toLowerCase();
-   const delimiter = `@`;
-   const indexOfEmail = lowerCaseEmail.indexOf(delimiter);
-   const localEmail = emailInput.slice(0, indexOfEmail);
+   // when let go's clicked, we are getting email and pw input
+   const emailInput = $(`#sign-up-email-input`).val();
+   const email = emailInput.trim().toLowerCase();
+   const password = $(`#sign-up-password-input`).val();
 
-   if (lowerCaseEmail.length === 0) {
-      // email error msg
-      $("#sign-up-email-input").addClass("is-invalid");
-      $("#sign-up-email-error").removeClass("d-none");
-      $("#sign-up-email-error").html("Please enter your email address.");
+   //passing values into functions
+   const passwordError = getPasswordError(password, email); // getPasswordError should return a string
+   console.log(passwordError);
+   if (passwordError !== ``) {
+      showError(`#sign-up-password`, passwordError);
    } else {
-      // email success msg
-      $("#sign-up-email-input").removeClass("is-invalid");
-      $("#sign-up-email-input").addClass("is-valid");
-      $("#sign-up-email-error").addClass("d-none");
+      hideError(`#sign-up-password`, passwordError);
    }
-   if (lowerCasePassword.length === 0) {
-      // password input
-      $("#sign-up-password-input").addClass("is-invalid");
-      $("#sign-up-password-error").removeClass("d-none");
-      $("#sign-up-password-error").html("Please enter your password.");
-   } else if (lowerCasePassword.length < 9) {
-      // password error msg. less than 9
-      $("#sign-up-password-input").addClass("is-invalid");
-      $("#sign-up-password-error").removeClass("d-none");
-      $("#sign-up-password-error").html(
-         "Your password must be at least 9 characters."
-      );
+
+   const emailError = getEmailError(email); // getEmailError should return a string
+   console.log(emailError);
+   if (emailError !== ``) {
+      showError(`#sign-up-email`, emailError);
    } else {
-      // password success msg
-      $("#sign-up-password-input").removeClass("is-invalid");
-      $("#sign-up-password-input").addClass("is-valid");
-      $("#sign-up-password-error").addClass("d-none");
+      hideError(`#sign-up-email`, emailError);
    }
-   if (lowerCasePassword.includes(localEmail) && localEmail.length >= 4) {
-      // pw match email error. contain local part
-      $("#sign-up-password-input").addClass("is-invalid");
-      $("#sign-up-password-error").removeClass("d-none");
-      $("#sign-up-password-error").html(
-         "All or part of your email address cannot be used in your password."
-      );
+
+   // email TLD
+   const emailTopLevelDomain = email.split(`.`); // mike@gmail, com
+   const lastIndexOfEmail = emailTopLevelDomain[1];
+   // console.log(lastIndexOfEmail);
+
+   // Date user signed up
+   let signedUpDate = new Date(Date.now()); // pulling current day as object
+   // signedUpDate = new Date(2020, 3, 7, 13, 15, 0, 000); // [april 7 2020] testing pad
+   const year = signedUpDate.getFullYear(); // pulling prop as number
+   const month = signedUpDate.getMonth();
+   const date = signedUpDate.getDate();
+   // const hour = signedUpDate.getHours();
+   // const minutes = signedUpDate.getMinutes();
+   // const seconds = signedUpDate.getSeconds();
+   const milliseconds = signedUpDate.getMilliseconds();
+   const yearString = String(year); //converting to string to combine
+   const monthString = String(month + 1); //+1 since month is 0-11
+   const dateString = String(date);
+   const millisecondsString = String(milliseconds);
+   const paddedMilliseconds = millisecondsString.padStart(3, `0`);
+   const paddedMonth = monthString.padStart(2, `0`); // add padStart to make add 0 in front of < 10 digit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+   const paddedDate = dateString.padStart(2, `0`);
+   const createdAt = yearString + paddedMonth + paddedDate;
+   console.log(createdAt);
+
+   // unique user id str
+   const uniqueId = getRandomInt(0, 999);
+   const uniqueIdNumAsStr = uniqueId.toFixed(0);
+
+   const id = uniqueIdNumAsStr + paddedMilliseconds;
+   console.log(`The unique user ID is ${id}`);
+
+   // user object
+   const user = {
+      email: email,
+      password: password,
+      createdAt: getCreatedAt(),
+      id: getId(),
+      emailTId: getTld(), // a string like `com` or `org` or `edu`
+      socialProfiles: [
+         {
+            site: "facebook",
+            siteId: "530c2716-36e2-4a80-93b7-0e8483d629e1",
+            username: "",
+            image: {
+               sm: "",
+               orig: "",
+            },
+         },
+         {
+            site: "twitter",
+            siteId: "79023b4d-57a2-406b-8efe-bda47fb1696c",
+            username: "",
+            image: {
+               sm: "",
+               md: "",
+               orig: "",
+            },
+         },
+      ],
+   };
+   if ((emailError, passwordError !== ``)) {
+      console.log(user);
+      return user;
    }
-   if (mostInsecurePasswords.includes(passwordInput.toLowerCase())) {
-      // password contain insecure password
-      $("#sign-up-password-input").addClass("is-invalid");
-      $("#sign-up-password-error").removeClass("d-none");
-      $("#sign-up-password-error").html(
-         `Your password contains a commonly used password, "${passwordInput.toLowerCase()}" and can be easily discovered by attackers. Please use something else.`
-      );
+   function getCreatedAt() {
+      return createdAt;
    }
-   // combining two array
-   const combinedInsecurePasswords = mostInsecurePasswords.concat(
-      secondMostInsecurePasswords
-   );
-   // removing subarrays
-   const allFlatPasswords = combinedInsecurePasswords.flat();
-
-   // removing dupe
-   const allUniqPasswords = [...new Set(allFlatPasswords)];
-
-   // removing pw skywalker & obama2016
-   const firstSlicePasswords = allUniqPasswords.slice(
-      0,
-      allUniqPasswords.indexOf("skywalker")
-   );
-   console.log(`here are the first set of passwords: \n`, firstSlicePasswords);
-
-   const secondSlicePasswords = allUniqPasswords.slice(
-      allUniqPasswords.indexOf("1010101010"),
-      allUniqPasswords.indexOf("obama2016")
-   );
-   console.log(
-      `here are the second set of passwords: \n`,
-      secondSlicePasswords
-   );
-
-   const thirdSlicePasswords = allUniqPasswords.slice(
-      allUniqPasswords.indexOf("mypassword")
-   );
-   console.log(`here are the third set of passwords: \n`, thirdSlicePasswords);
-
-   // combined all 3 list
-   const unacceptablePasswords = firstSlicePasswords.concat(
-      secondSlicePasswords,
-      thirdSlicePasswords
-   );
-   console.log(`Final list of unacceptable passwords:`, unacceptablePasswords);
+   function getId() {
+      return id;
+   }
+   function getTld() {
+      return lastIndexOfEmail;
+   }
 });
+
+//email & pw error
+//side effect functions jQuery
+function showError(element, message) {
+   $(`${element}-input`).addClass(`is-invalid`);
+   $(`${element}-error`).html(message);
+}
+
+function hideError(element, message) {
+   $(`${element}-input`).removeClass(`is-invalid`);
+   $(`${element}-error`).html(message);
+}
+
+//padStart
+function padStart(num, width, char) {
+   const numAsStr = String(num); //convert num to str to add zeros
+   let padding = ``;
+   for (let i = 0; i < width; i++) {
+      padding += char; // += padding = padding + char (additional assignment operator)
+   }
+   const concattedStr = padding + numAsStr;
+
+   if (numAsStr.length >= width) {
+      console.log(`${numAsStr.length} is >= the width of ${width}`); // to make sure data isnt cut off
+      return numAsStr; // return a string
+   }
+   const slicedStr = concattedStr.slice(-width); //generate padding then taking data from the right.
+   return slicedStr; // returns a sliced string
+}
+// unique user id str
+function getRandomInt(min, max) {
+   return Math.floor(Math.random() * (max + 1 - min) + min);
+}
