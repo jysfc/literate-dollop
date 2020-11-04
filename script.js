@@ -57,7 +57,7 @@ $("#lets-go").click(function () {
    const paddedMonth = monthString.padStart(2, `0`); // add padStart to make add 0 in front of < 10 digit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
    const paddedDate = dateString.padStart(2, `0`);
    const createdAt = yearString + paddedMonth + paddedDate;
-   console.log(createdAt);
+   console.log(`login created at ${createdAt}`);
 
    // unique user id str
    const uniqueId = getRandomInt(0, 999);
@@ -110,7 +110,6 @@ $("#lets-go").click(function () {
    }
 
    // new User(activeUser)
-
    const activeUser = deepCopy(user);
    activeUser.isActive = true;
    activeUser.createdAt = Date.now();
@@ -124,21 +123,38 @@ $("#lets-go").click(function () {
       console.log(activeUser.socialProfiles);
    });
 
-   // for (let i = 0; i < activeUser.socialProfiles.length; i++) {
-   //    const socialProfile = activeUser.socialProfiles[i];
-   //    delete socialProfile.image.sm;
-   //    delete socialProfile.image.md;
-   //    console.log("-----------------");
-   //    console.log(activeUser.socialProfiles);
-   // }
-
    // otherwise show the social profiles
    console.log("-----------------");
    console.log(user.socialProfiles);
+
+   // normalizing user object
+   const users = [user, activeUser];
+   const currentUsers = users
+      .map((user) => {
+         return {
+            id: user.id,
+            email: user.email,
+            password: user.password,
+            createdAt: user.createdAt,
+            isActive: getIsActive(user.isActive),
+         };
+      })
+      .filter((user) => {
+         // only return users with a isActive acct
+         return user.isActive === true;
+      });
+   console.log(currentUsers);
 });
 
 /* functions start here */
 
+// getIsActive
+function getIsActive(status) {
+   if (status === undefined) {
+      return false;
+   }
+   return status;
+}
 // deep copy
 function deepCopy(obj) {
    const str = JSON.stringify(obj);
@@ -154,7 +170,6 @@ function safelyParseJson(str) {
    }
    return JSON.parse(str);
 }
-
 //email & pw error
 //side effect functions jQuery
 function showError(element, message) {
