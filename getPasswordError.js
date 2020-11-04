@@ -4,6 +4,18 @@ function getPasswordError(password, email) {
    const unacceptablePasswords = getUnacceptablePasswords(); // return a list
    console.log(unacceptablePasswords);
 
+   //every to question data
+   const isPwGreaterThanNine = unacceptablePasswords.every((password) => {
+      return password.length >= 9;
+   });
+   console.log(`Is every password >=9 ?`, isPwGreaterThanNine);
+
+   //some
+   const hasQwerty = unacceptablePasswords.some((password) => {
+      return password.includes(`qwerty`);
+   });
+   console.log(`Do we have the password (qwerty) ?`, hasQwerty);
+
    if (password.length === 0) {
       // password input. field blank
       return `Please create a password.`;
@@ -27,7 +39,8 @@ function getPasswordError(password, email) {
    function getUnacceptablePasswords() {
       // combining two array from their respective files
       const combinedInsecurePasswords = mostInsecurePasswords.concat(
-         secondMostInsecurePasswords
+         secondMostInsecurePasswords,
+         formattedAllInsecurePasswords
       );
       // removing subarrays
       const allFlatPasswords = combinedInsecurePasswords.flat();
